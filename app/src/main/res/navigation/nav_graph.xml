@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.tutor.OnboardingFragment"
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_roleSelectFragment"
+            app:destination="@id/roleSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment2"
+        android:name="com.example.tutor.auth.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roleSelectFragment"
+        android:name="com.example.tutor.auth.RoleSelectFragment"
+        android:label="RoleSelectFragment"
+        tools:layout="@layout/fragment_role_select">
+        <action
+            android:id="@+id/action_roleSelectFragment_to_registerFragment2"
+            app:destination="@id/registerFragment2" />
+        <action
+            android:id="@+id/action_roleSelectFragment_to_curatorRegisterFragment"
+            app:destination="@id/curatorRegisterFragment" />
+        <action
+            android:id="@+id/action_roleSelectFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/curatorRegisterFragment"
+        android:name="com.example.tutor.auth.CuratorRegisterFragment"
+        android:label="CuratorRegisterFragment"
+        tools:layout="@layout/fragment_curator_register"
+        >
+        <action
+            android:id="@+id/action_curatorRegisterFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tutor.auth.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_roleSelectFragment"
+            app:destination="@id/roleSelectFragment" />
+    </fragment>
+</navigation>

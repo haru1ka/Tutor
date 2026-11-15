@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">Куратор</string>
+    <string name="choose_role">Выбор роли:</string>
+    <string name="role_student">Я ученик</string>
+    <string name="role_mentor">Я наставник</string>
+    <string name="role_curator">Я куратор</string>
+    <string name="next">ДАЛЕЕ</string>
+    <string name="have_account">У меня уже есть <u>аккаунт</u></string>
+    <string name="back">Назад</string>
+    <string name="register_title">РЕГИСТРАЦИЯ</string>
+    <string name="register_curator_title">Вход для куратора</string>
+    <string name="curator_subtitle">Доступ только по приглашению</string>
+    <string name="hint_name">Ваше имя</string>
+    <string name="hint_email">Ваш email</string>
+    <string name="hint_password">Придумайте пароль</string>
+    <string name="hint_password_confirm">Подтвердите пароль</string>
+    <string name="hint_invite_code">Инвайт-код</string>
+    <string name="terms_text">Регистрируясь, вы принимаете наше пользовательское соглашение, вы прочитали и согласны с политикой конфиденциальности.</string>
+    <string name="terms_agreement">пользовательское соглашение</string>
+    <string name="terms_privacy">политикой конфиденциальности</string>
+    <string name="err_name">Введите имя</string>
+    <string name="err_email">Некорректный email</string>
+    <string name="err_password">Минимум 6 символов</string>
+    <string name="err_password_match">Пароли не совпадают</string>
+    <string name="err_invite_code">Введите инвайт-код</string>
+    <string name="login_title">ВХОД В АККАУНТ</string>
+    <string name="hint_login_password">Пароль</string>
+    <string name="login_button">ВОЙТИ</string>
+    <string name="forgot_password"><u>Забыли пароль?</u></string>
+    <string name="register_new"><u>Регистрация</u> нового аккаунта</string>
+    <string name="err_field_empty">Заполните поле</string>
+</resources>
