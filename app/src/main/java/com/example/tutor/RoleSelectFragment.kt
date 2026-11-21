@@ -32,17 +32,29 @@ class RoleSelectFragment : Fragment(R.layout.fragment_role_select) {
             savedInstanceState?.getString(KEY_ROLE)?.let { Role.valueOf(it) } ?: Role.STUDENT
         )
 
+
         view.findViewById<View>(R.id.btnNext).setOnClickListener {
+
             val nav = findNavController()
-            if (selectedRole == Role.CURATOR) {
-                nav.navigate(R.id.action_roleSelectFragment_to_curatorRegisterFragment)
-            } else {
-                nav.navigate(
-                    R.id.action_roleSelectFragment_to_registerFragment2,
-                    bundleOf(RegisterFragment.ARG_ROLE to selectedRole.name)
-                )
+
+            when (selectedRole) {
+
+                Role.MENTOR -> {
+                    nav.navigate(R.id.mentorQuestionnaireFragment)
+                }
+
+                Role.CURATOR -> {
+                    nav.navigate(
+                        R.id.action_roleSelectFragment_to_curatorRegisterFragment
+                    )
+                }
+
+                Role.STUDENT -> {
+                    nav.navigate(R.id.studentQuestionnaireFragment)
+                }
             }
         }
+
 
         view.findViewById<View>(R.id.tvHaveAccount).setOnClickListener {
             findNavController().navigate(R.id.action_roleSelectFragment_to_loginFragment)

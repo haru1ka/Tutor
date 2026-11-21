@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnBackStudent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="‹  Назад"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Шаг 1 из 3"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp">
+
+            <ProgressBar
+                android:layout_width="266dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:progress="33"
+                android:progressDrawable="@drawable/questionnaire_progress"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Чего вы хотите достичь?"
+            android:textColor="@color/dark_blue"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Это поможет нам подобрать наставника с нужной экспертизой."
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="15dp"
+            android:text="Сфера"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sphereIT"
+                style="@style/QuestionOption"
+                android:text="IT и разработка" />
+
+            <TextView
+                android:id="@+id/sphereDesign"
+                style="@style/QuestionOption"
+                android:text="Дизайн" />
+        </LinearLayout>
+
+        <!-- Сфера: ряд 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sphereMarketing"
+                style="@style/QuestionOption"
+                android:text="Маркетинг" />
+
+            <TextView
+                android:id="@+id/sphereProduct"
+                style="@style/QuestionOption"
+                android:text="Продукт" />
+        </LinearLayout>
+
+        <!-- Сфера: ряд 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sphereAnalytics"
+                style="@style/QuestionOption"
+                android:text="Аналитика" />
+
+            <TextView
+                android:id="@+id/sphereOther"
+                style="@style/QuestionOption"
+                android:text="Другое" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Цель"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etStudentGoal"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:hint="Например: освоить Python для анализа данных за 6 месяцев"
+            android:padding="14dp"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStudentNext1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:text="ДАЛЕЕ"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/orange"
+            app:cornerRadius="14dp" />
+
+    </LinearLayout>
+</ScrollView>
