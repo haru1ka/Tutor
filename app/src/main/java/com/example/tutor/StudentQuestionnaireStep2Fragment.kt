@@ -42,6 +42,10 @@ class StudentQuestionnaireStep2Fragment :
                     R.id.action_studentQuestionnaireStep2Fragment_to_studentQuestionnaireStep3Fragment
                 )
             }
+        view.findViewById<View>(R.id.btnBackStudent2)
+            .setOnClickListener {
+                findNavController().navigateUp()
+            }
     }
     private fun setupMultipleChoice(view: View, ids: List<Int>) {
         ids.forEach { id ->

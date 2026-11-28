@@ -63,5 +63,10 @@ class MentorQuestionnaireFragment :
                 findNavController().navigate(
                     R.id.action_mentorQuestionnaireFragment_to_mentorQuestionnaireStep2Fragment)
             }
+
+        view.findViewById<TextView>(R.id.btnBack)
+            .setOnClickListener {
+                findNavController().popBackStack()
+            }
     }
 }

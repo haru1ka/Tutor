@@ -31,7 +31,13 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
         view.findViewById<View>(R.id.btnNext).setOnClickListener {
             if (validateCommon(etName, etEmail, etPassword, etConfirm)) {
-                // отправить на сервер
+                // TODO: отправить данные регистрации на сервер
+
+                val actionId = when (role) {
+                    Role.MENTOR -> R.id.action_registerFragment2_to_mentorQuestionnaireFragment
+                    else -> R.id.action_registerFragment2_to_studentQuestionnaireFragment
+                }
+                findNavController().navigate(actionId)
             }
         }
 
