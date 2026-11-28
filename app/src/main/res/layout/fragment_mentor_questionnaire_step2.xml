@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="28dp">
+
+        <!-- Верхняя панель -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/btnBackStep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/ic_arrow_back"
+                android:text="Назад"
+                android:textColor="@color/blue2"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Шаг 2 из 3"
+                android:textColor="@color/blue2"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <!-- Прогресс -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="30dp">
+
+            <ProgressBar
+                android:layout_width="266dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:progress="66"
+                android:progressDrawable="@drawable/questionnaire_progress"
+                style="?android:attr/progressBarStyleHorizontal"/>
+
+        </FrameLayout>
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Чему вы можете научить?"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <!-- Навыки -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Навыки"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/skillPython"
+                style="@style/QuestionOption"
+                android:text="Python"/>
+
+            <TextView
+                android:id="@+id/skillSQL"
+                style="@style/QuestionOption"
+                android:text="SQL"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/skillFigma"
+                style="@style/QuestionOption"
+                android:text="Figma"/>
+
+            <TextView
+                android:id="@+id/skillExcel"
+                style="@style/QuestionOption"
+                android:text="Excel" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/skillCopywriting"
+                style="@style/QuestionOption"
+                android:text="Копирайтинг"/>
+
+            <TextView
+                android:id="@+id/skillOther"
+                style="@style/QuestionOption"
+                android:text="Другое" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/skillProject"
+                style="@style/QuestionOption"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Управление проектами"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- Темы -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Темы для менторства"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etMentorTopics"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top|start"
+            android:hint="Опишите конкретные темы"
+            android:padding="14dp"
+            android:textColor="@color/grey"
+            android:textColorHint="#B5B5B5"
+            android:textSize="15sp"
+            android:inputType="textMultiLine"/>
+
+        <!-- Общение -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Как вам удобнее общаться?"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(можно выбрать несколько)"
+            android:textColor="@color/grey"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/communicationChat"
+                style="@style/QuestionOption"
+                android:text="Текстовый чат"/>
+
+            <TextView
+                android:id="@+id/communicationVideo"
+                style="@style/QuestionOption"
+                android:text="Онлайн-видео"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/communicationOffline"
+                style="@style/QuestionOption"
+                android:text="Офлайн-встречи"/>
+
+        </LinearLayout>
+
+        <!-- Далее -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnQuestionNextStep2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:text="ДАЛЕЕ"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:backgroundTint="@color/orange"
+            app:cornerRadius="9dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

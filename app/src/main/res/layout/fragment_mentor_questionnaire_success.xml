@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F8F8F8"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Анкета заполнена!"
+        android:textColor="@color/dark_blue"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- Описание -->
+
+    <!-- Кнопка -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="Ваш профиль отправлен на проверку куратору. Обычно это занимает до 24 часов. Мы пришлем уведомление, когда ваш профиль будет опубликован."
+        android:textColor="@color/light_blue"
+        android:textSize="24sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoHome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:text="НА ГЛАВНУЮ"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:backgroundTint="@color/orange"
+        app:cornerRadius="9dp" />
+
+</LinearLayout>

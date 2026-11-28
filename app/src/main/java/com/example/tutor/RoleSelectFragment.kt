@@ -32,8 +32,10 @@ class RoleSelectFragment : Fragment(R.layout.fragment_role_select) {
             savedInstanceState?.getString(KEY_ROLE)?.let { Role.valueOf(it) } ?: Role.STUDENT
         )
 
+
         view.findViewById<View>(R.id.btnNext).setOnClickListener {
             val nav = findNavController()
+
             if (selectedRole == Role.CURATOR) {
                 nav.navigate(R.id.action_roleSelectFragment_to_curatorRegisterFragment)
             } else {
@@ -43,6 +45,7 @@ class RoleSelectFragment : Fragment(R.layout.fragment_role_select) {
                 )
             }
         }
+
 
         view.findViewById<View>(R.id.tvHaveAccount).setOnClickListener {
             findNavController().navigate(R.id.action_roleSelectFragment_to_loginFragment)

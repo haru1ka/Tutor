@@ -22,6 +22,16 @@
         <action
             android:id="@+id/action_registerFragment2_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment2_to_studentQuestionnaireFragment"
+            app:destination="@id/studentQuestionnaireFragment"
+            app:popUpTo="@id/registerFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment2_to_mentorQuestionnaireFragment"
+            app:destination="@id/mentorQuestionnaireFragment"
+            app:popUpTo="@id/registerFragment2"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/roleSelectFragment"
@@ -57,4 +67,66 @@
             android:id="@+id/action_loginFragment_to_roleSelectFragment"
             app:destination="@id/roleSelectFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mentorQuestionnaireFragment"
+        android:name="com.example.tutor.auth.MentorQuestionnaireFragment"
+        android:label="Анкета наставника"
+        tools:layout="@layout/fragment_mentor_questionnaire" >
+        <action
+            android:id="@+id/action_mentorQuestionnaireFragment_to_mentorQuestionnaireStep2Fragment"
+            app:destination="@id/mentorQuestionnaireStep2Fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mentorQuestionnaireStep2Fragment"
+        android:name="com.example.tutor.auth.MentorQuestionnaireStep2Fragment"
+        android:label="Второй экран анкеты"
+        tools:layout="@layout/fragment_mentor_questionnaire_step2" >
+    <action
+        android:id="@+id/action_mentorQuestionnaireStep2Fragment_to_mentorQuestionnaireStep3Fragment"
+        app:destination="@id/mentorQuestionnaireStep3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentorQuestionnaireStep3Fragment"
+        android:name="com.example.tutor.auth.MentorQuestionnaireStep3Fragment"
+        android:label="Анкета наставника — шаг 3"
+        tools:layout="@layout/fragment_mentor_questionnaire_step3" >
+    <action
+        android:id="@+id/action_mentorQuestionnaireStep3Fragment_to_mentorQuestionnaireSuccessFragment"
+        app:destination="@id/mentorQuestionnaireSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mentorQuestionnaireSuccessFragment"
+        android:name="com.example.tutor.auth.MentorQuestionnaireSuccessFragment"
+        android:label="Анкета заполнена"
+        tools:layout="@layout/fragment_mentor_questionnaire_success" />
+    <fragment
+        android:id="@+id/studentQuestionnaireFragment"
+        android:name="com.example.tutor.auth.StudentQuestionnaireFragment"
+        android:label="Анкета ученика"
+        tools:layout="@layout/fragment_student_questionnaire">
+
+        <action
+            android:id="@+id/action_studentQuestionnaireFragment_to_studentQuestionnaireStep2Fragment"
+            app:destination="@id/studentQuestionnaireStep2Fragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/studentQuestionnaireStep2Fragment"
+        android:name="com.example.tutor.auth.StudentQuestionnaireStep2Fragment"
+        android:label="Анкета ученика — шаг 2"
+        tools:layout="@layout/fragment_student_questionnaire_step2">
+
+        <action
+            android:id="@+id/action_studentQuestionnaireStep2Fragment_to_studentQuestionnaireStep3Fragment"
+            app:destination="@id/studentQuestionnaireStep3Fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/studentQuestionnaireStep3Fragment"
+        android:name="com.example.tutor.auth.StudentQuestionnaireStep3Fragment"
+        android:label="Анкета ученика — шаг 3"
+        tools:layout="@layout/fragment_student_questionnaire_step3" />
+
 </navigation>
